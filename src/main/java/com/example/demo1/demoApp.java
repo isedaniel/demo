@@ -14,6 +14,7 @@ public class demoApp extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("main.fxml")));
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/style.css").toExternalForm());
 
         stage.setTitle("Demo App");
         stage.setScene(scene);
