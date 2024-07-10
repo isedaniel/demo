@@ -13,7 +13,12 @@ import java.util.Objects;
 public class scene1Controller {
 
     public void login(ActionEvent e) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("scene2.fxml")));
+        FXMLLoader loader = new FXMLLoader();
+
+        scene2Controller s2c = new scene2Controller();
+        s2c.displayName("Test");
+
+        Parent root = loader.load(Objects.requireNonNull(getClass().getResource("scene2.fxml")));
         Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
