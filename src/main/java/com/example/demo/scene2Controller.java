@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,10 +15,10 @@ import java.util.Objects;
 public class scene2Controller {
 
     @FXML
-    Label textLabel;
+    Label welcomeLabel;
 
     public void displayName(String name) {
-        textLabel.setText("Welcome: " + name);
+        welcomeLabel.setText("Welcome: " + name);
     }
 
     public void logout(ActionEvent e) throws IOException {
